@@ -1,0 +1,69 @@
+.rover-3d-dialog .mission-experience{padding:0;min-height:100svh}
+.rover-3d-dialog[data-mode="playing"] .mission-experience{height:100svh;min-height:0;background:#02040a;overflow:hidden}
+.rover-3d-dialog .mission-flow-bar{width:100%;min-height:54px;padding:8px 22px;background:#08111e;flex-shrink:0;border-bottom:1px solid #30425666}
+.rover-3d-play{position:relative;flex:1;min-height:0}
+.rover-3d-scene{position:relative;width:100%;height:100%;min-height:460px;overflow:clip;background:#02040a}
+#rover-3d-canvas{display:block;width:100%;height:100%;touch-action:none;outline-offset:-4px}
+.rover-loading,.rover-load-error{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:32px;background:#07111df5}
+.rover-loading p,.rover-load-error p{color:var(--sub);max-width:36ch;font-size:.95rem}
+.rover-loading-orbit{color:var(--mint);font-size:2.3rem}
+.rover-hud{position:absolute;inset:0;pointer-events:none;color:var(--paper);font-size:.85rem}
+.rover-hud button,.rover-drive-pad,.rover-minimap{pointer-events:auto}
+.rover-objective{position:absolute;top:20px;left:20px;padding:16px 20px;width:min(355px,calc(100% - 120px));border:1px solid #6f8b9c55;border-radius:12px;background:#08141ed9;backdrop-filter:blur(10px)}
+.rover-objective h2{font-size:1.3rem;letter-spacing:.02em;line-height:1.3}
+.rover-objective h2:focus{outline:none}.rover-objective>p{font-size:.85rem;color:#cad7e2;margin-top:7px}
+.rover-target{display:flex;align-items:center;gap:10px;color:var(--mint);margin-top:10px;font-weight:700}
+#r3-target-arrow{display:inline-block;font-size:1.25rem;line-height:1;min-width:18px;text-align:center}
+.rover-pause-button{position:absolute;top:20px;right:20px;min-height:40px;background:#08141ee6;border-color:#6f8b9c88;font-size:.82rem}
+.rover-telemetry{position:absolute;top:80px;right:20px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px;padding:14px 18px;border:1px solid #6f8b9c55;border-radius:10px;background:#08141edb;min-width:275px}
+.rover-telemetry span{display:block;color:#aebfcd;font-size:.7rem}.rover-telemetry output{display:block;font-size:1.15rem;font-weight:700;white-space:nowrap}
+.rover-telemetry output small{font-size:.65rem;color:#aebfcd;font-weight:400}
+.rover-battery progress{display:block;width:72px;height:4px;margin-top:5px;accent-color:var(--mint)}
+.rover-battery.is-low output{color:var(--amber)}
+.rover-inventory{position:absolute;top:185px;right:20px;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 12px;max-width:280px;text-shadow:0 2px 5px #000;font-size:.77rem}
+.rover-inventory span{background:#08141ebd;padding:4px 8px;border-radius:5px}
+.rover-inventory .is-collected{color:var(--mint)}
+.rover-inventory output{display:block;flex-basis:100%;font-size:.65rem;color:#cad7e2;text-align:right}
+.rover-minimap{position:absolute;right:20px;bottom:28px;width:162px;background:#08141ee8;border:1px solid #627c8d88;border-radius:10px;overflow:hidden}
+.rover-minimap canvas{display:block;width:100%;height:auto;aspect-ratio:1}
+.rover-minimap figcaption{display:flex;justify-content:space-between;padding:5px 9px;border-top:1px solid #627c8d44;font-size:.67rem;color:#b9cbd9}
+.rover-utilities{position:absolute;left:20px;bottom:216px;display:flex;gap:6px}
+.rover-utilities button{min-height:35px;padding:5px 10px;font-size:.7rem;background:#08141edb;border-color:#6f8b9c88}
+.rover-utilities #r3-sound{min-height:44px;color:var(--mint)}
+.rover-utilities #r3-sound[aria-pressed="false"]{color:#b0bdc8}
+.rover-drive-pad{position:absolute;left:27px;bottom:34px;display:grid;grid-template-columns:repeat(3,49px);grid-template-rows:repeat(3,49px);gap:4px;touch-action:none;user-select:none}
+.rover-drive-pad button{display:flex;flex-direction:column;gap:0;min-height:0;padding:2px;border:1px solid #718d9e99;border-radius:9px;background:#08141ee6;color:#f2f6f9;font-size:1.4rem;line-height:1.1;touch-action:none;user-select:none;-webkit-user-select:none;transition:background-color .12s}
+.rover-drive-pad button small{font-size:.6rem;line-height:1.5;color:#bdcdd8}
+.rover-drive-pad button[data-held="true"]{background:#20554e;border-color:var(--mint)}
+.rover-drive-pad button:not(:disabled):active{transform:none}
+.rover-drive-pad [data-rover-control="forward"]{grid-column:2;grid-row:1}.rover-drive-pad [data-rover-control="left"]{grid-column:1;grid-row:2}.rover-drive-pad [data-rover-control="right"]{grid-column:3;grid-row:2}.rover-drive-pad [data-rover-control="backward"]{grid-column:2;grid-row:3}
+.rover-drive-pad>span{grid-column:2;grid-row:2;display:grid;place-items:center;color:#92f0d199;font-size:1.4rem}
+.rover-interaction{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);width:min(490px,calc(100% - 490px));padding:14px 18px;border:1px solid #6f8b9c66;border-radius:12px;background:#08141ee8}
+#r3-status{font-size:.85rem;line-height:1.6;min-height:2.9em;color:#d3e2eb}
+#r3-status[data-tone="warning"]{color:var(--amber)}#r3-status[data-tone="ready"]{color:var(--mint)}
+.rover-context-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.rover-context-actions button{min-height:42px;font-size:.8rem;padding:8px 12px;flex:1;white-space:nowrap}
+.rover-context-actions kbd{font:inherit;font-size:.68rem;padding:0 5px;border:1px solid #154a3f66;border-radius:3px}
+.rover-keyboard-help{margin-top:10px;font-size:.67rem;color:#9eb5c7;line-height:1.7}
+#r3-sampling{height:5px;width:100%;margin:4px 0;accent-color:var(--amber)}
+.rover-simulation-note{position:absolute;left:16px;right:16px;bottom:5px;text-align:center;font-size:.59rem;color:#b3c2d0;text-shadow:0 1px 3px #000}
+.rover-pause-panel{position:absolute;inset:0;z-index:8;display:grid;place-items:center;padding:24px;background:#020810bd;backdrop-filter:blur(6px)}
+.rover-pause-panel>div{width:min(360px,100%);padding:28px;border:1px solid #6f8b9c88;border-radius:14px;background:#0b1927}
+.rover-pause-panel h3{font-size:1.9rem;margin:7px 0 12px}.rover-pause-panel p{font-size:.87rem;color:var(--sub)}
+.rover-pause-panel button{width:100%;margin-top:12px;font-size:.9rem}.rover-pause-panel .primary{margin-top:24px}
+.rover-3d-dialog .mission-result-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.rover-interaction{left:auto;right:202px;transform:none;width:calc(100% - 420px);padding:12px}.rover-context-actions{flex-direction:column}.rover-keyboard-help{font-size:.61rem}}
+@media(max-width:700px){
+ .rover-3d-dialog .mission-flow-bar{min-height:50px;padding:7px 12px}.rover-3d-dialog .mission-flow-bar>span{font-size:.76rem}
+ .rover-3d-scene{min-height:410px}.rover-objective{top:12px;left:12px;width:calc(100% - 100px);padding:11px 13px}.rover-objective h2{font-size:1.1rem}.rover-objective>p{font-size:.72rem;margin-top:4px}.rover-target{font-size:.73rem;gap:7px;margin-top:7px}
+ .rover-pause-button{top:12px;right:12px;font-size:.72rem;min-height:38px;padding:7px 9px}
+ .rover-telemetry{top:126px;left:12px;right:12px;min-width:0;gap:16px;padding:9px 13px;grid-template-columns:1.3fr 1fr 1fr}.rover-telemetry output{font-size:1rem}.rover-telemetry span{font-size:.63rem}.rover-battery progress{height:3px;margin-top:3px}
+ .rover-inventory{top:202px;left:12px;right:auto;max-width:190px;justify-content:flex-start;gap:5px}.rover-inventory span{font-size:.65rem;padding:3px 6px}.rover-inventory output{text-align:left;font-size:.59rem}
+ .rover-minimap{top:201px;bottom:auto;right:12px;width:108px}.rover-minimap figcaption{font-size:.57rem;padding:3px 5px}
+ .rover-drive-pad{left:14px;bottom:30px;grid-template-columns:repeat(3,44px);grid-template-rows:repeat(3,44px);gap:3px}.rover-drive-pad button{font-size:1.25rem}.rover-drive-pad button small{font-size:.54rem}
+ .rover-utilities{left:12px;bottom:184px;gap:5px}.rover-utilities button{font-size:.61rem;min-height:32px;padding:5px 7px}
+ .rover-interaction{left:auto;right:12px;bottom:30px;width:calc(100% - 176px);padding:10px 11px}#r3-status{font-size:.72rem;min-height:3em}.rover-context-actions{gap:6px;margin-top:6px}.rover-context-actions button{font-size:.71rem;padding:7px 8px;min-height:42px}.rover-keyboard-help{display:none}
+ .rover-simulation-note{font-size:.54rem;bottom:7px}.rover-3d-dialog .mission-result-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-height:560px) and (min-width:601px){.rover-objective{padding:9px 13px;top:12px}.rover-objective>p{display:none}.rover-telemetry{top:65px;padding:8px 12px}.rover-inventory{top:145px}.rover-drive-pad{grid-template-columns:repeat(3,40px);grid-template-rows:repeat(3,40px);bottom:22px}.rover-utilities{bottom:160px}.rover-interaction{bottom:22px}.rover-keyboard-help{display:none}.rover-minimap{width:125px;bottom:22px}.rover-3d-scene{min-height:0}}
+@media(prefers-reduced-motion:reduce){.rover-drive-pad button{transition:none}}

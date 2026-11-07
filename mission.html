@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="走進太陽系，點選太陽、行星與月球拉近觀察，閱讀介紹並挑戰太空探索任務。">
+<title>太空任務｜下一站，宇宙！</title>
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script><script src="page-motion.js" defer></script>
+<link rel="stylesheet" href="space-missions.css?v=sun-mission-3"><script src="space-missions.js?v=sun-mission-3" defer></script>
+<noscript><style>.lunar-missions[hidden]{display:block!important}</style></noscript>
+<link rel="stylesheet" href="mission-flow.css"><script src="mission-flow.js?v=rover-3d" defer></script><script src="mission.js" defer></script>
+<link rel="stylesheet" href="rover-3d.css?v=4"><script src="rover-3d-core.js?v=4" defer></script><script src="rover-3d-effects.js?v=4" defer></script><script src="rover-3d-audio.js?v=4" defer></script><script src="rover-3d-world.js?v=4" defer></script><script src="rover-3d.js?v=4" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header><nav class="wrap" aria-label="主導覽">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">✦</span>下一站，宇宙！</a>
+<div class="navlinks"><a href="index.html">首頁</a><a href="knowledge.html">太空知識</a><a href="stories.html">互動故事</a><a href="mission.html" aria-current="page">太空任務</a><a href="teachers.html">教師資源</a></div>
+<span class="badge">會談原型</span>
+</nav></header>
+<main id="main" class="space-page" tabindex="-1">
+<section class="space-explorer" id="space-explorer" aria-labelledby="space-title">
+<svg class="sr-only" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="planet-photo-cutout" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 16 16 16 0 -1.2"/></filter></defs></svg>
+<div class="space-heading"><h1 id="space-title">太空任務</h1><p id="space-instruction">宇宙這麼大，第一站想去哪裡？<br>點選一個天體，靠近看看。</p></div>
+<div class="space-tools"><button type="button" id="space-back" hidden>↖ 返回太陽系</button><button type="button" id="space-pause" aria-pressed="false">Ⅱ 暫停公轉</button></div>
+<div class="space-viewport" id="space-viewport" role="group" aria-label="可互動的太陽系，點選天體查看介紹與任務">
+<div class="space-camera" id="space-camera">
+<div class="orbit-tracks" id="orbit-tracks" aria-hidden="true"></div>
+<button type="button" class="space-sun" id="space-sun" aria-label="探索太陽" aria-controls="planet-detail" aria-pressed="false"><span aria-hidden="true"></span><small aria-hidden="true">太陽</small></button>
+<div id="space-planets"></div>
+</div></div>
+<div class="space-overview-note" id="space-overview-note"><span class="space-note-line"></span><p>從太陽出發，探索八大行星與月球。</p></div>
+<section class="planet-detail" id="planet-detail" aria-labelledby="planet-title" hidden>
+<div class="planet-detail-heading"><p id="planet-type"></p><h2 id="planet-title" tabindex="-1"></h2><span id="planet-english" lang="en"></span></div>
+<p class="planet-description" id="planet-description"></p>
+<p class="planet-image-credit"><span id="planet-photo-mission"></span><br><span id="planet-photo-credit"></span> · <a id="planet-photo-source" target="_blank" rel="noopener">影像來源 ↗</a></p>
+<dl class="planet-facts"><div><dt>所在位置</dt><dd id="planet-position"></dd></div><div><dt>觀察重點</dt><dd id="planet-feature"></dd></div></dl>
+<section class="planet-assignment" aria-labelledby="assignment-title"><p class="assignment-label">這一站的任務</p><h3 id="assignment-title"></h3><p id="assignment-prompt"></p><button type="button" id="assignment-reveal" aria-expanded="false" aria-controls="assignment-answer">看看探索提示</button><p id="assignment-answer" role="status" hidden></p><a class="button primary" id="lunar-mission-link" href="#lunar-missions" hidden>駕駛月球車</a></section>
+</section>
+<p class="space-scale-note">大小、距離與公轉速度為互動示意，非實際比例。影像來源：<a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener">NASA</a>、<a href="https://science.nasa.gov/photojournal/image-of-sun-from-nasas-solar-dynamics-observatory/" target="_blank" rel="noopener" title="太陽：NASA/GSFC/SDO 極紫外光觀測著色影像">太陽 SDO</a>（部分為合成或色彩處理影像）。</p>
+<p class="sr-only" id="space-announcement" role="status" aria-live="polite"></p>
+<noscript><p class="space-no-script">請啟用 JavaScript 以探索太陽與行星。也可以先體驗下方月球任務。</p></noscript>
+</section>
+<section class="wrap section lunar-missions" id="lunar-missions" aria-labelledby="missions-title" hidden>
+<div class="page-intro"><h2 id="missions-title">月球探索任務</h2><p>從規劃路線到辨認樣本，親自完成一次月面探索。</p></div>
+<div class="mission-catalog">
+<article class="article-card catalog-card" id="sample-mission" aria-labelledby="mission-sample-title">
+<div class="catalog-surface">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/mission-rover.png" alt="月球車在月面留下輪胎軌跡" width="1672" height="941"></span>
+<div class="article-card-content"><p class="article-category">選路與探索</p>
+<h2 id="mission-sample-title">月面採樣</h2><p class="article-summary">駕駛 3D 月球車探索月面，繞過撞擊坑、採集岩石樣本，再返回基地。</p>
+<button type="button" class="primary" id="open-rover-3d" data-open-activity="rover-3d-activity" aria-haspopup="dialog" aria-controls="rover-3d-activity" aria-describedby="mission-sample-title">開始 3D 任務 <span class="card-arrow" aria-hidden="true">→</span></button>
+</div></div></article>
+<article class="article-card catalog-card" id="power-mission" aria-labelledby="mission-power-title">
+<div class="catalog-surface">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/mission-rover.png" alt="在平緩月面行進的月球車" width="1672" height="941"></span>
+<div class="article-card-content"><p class="article-category">資源管理</p>
+<h2 id="mission-power-title">保留電力</h2><p class="article-summary">採集至少一份樣本並返回基地，結算時保留至少 60% 電量。</p>
+<button type="button" class="primary" data-open-activity="rover-activity" data-mission="power" aria-haspopup="dialog" aria-controls="rover-activity" aria-describedby="mission-power-title">開始任務 <span class="card-arrow" aria-hidden="true">→</span></button>
+</div></div></article>
+<article class="article-card catalog-card" aria-labelledby="mission-impact-title">
+<div class="catalog-surface">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/terrain.png" alt="月面撞擊坑及周圍的岩石" width="1672" height="941"></span>
+<div class="article-card-content"><p class="article-category">樣本判讀</p>
+<h2 id="mission-impact-title">找撞擊線索</h2><p class="article-summary">駕駛月球車探索環坑採樣點，帶回可討論撞擊破碎的樣本。</p>
+<button type="button" class="primary" data-open-activity="rover-activity" data-mission="impact" aria-haspopup="dialog" aria-controls="rover-activity" aria-describedby="mission-impact-title">開始任務 <span class="card-arrow" aria-hidden="true">→</span></button>
+</div></div></article>
+<article class="article-card catalog-card" aria-labelledby="mission-budget-title">
+<div class="catalog-surface">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/hero.png" alt="月面與遠方的地球" width="1672" height="941"></span>
+<div class="article-card-content"><p class="article-category">路線決策</p>
+<h2 id="mission-budget-title">電力判斷挑戰</h2><p class="article-summary">閱讀兩條路線的耗電資訊，判斷哪條路能保留足夠的電量。</p>
+<button type="button" class="primary" data-open-activity="power-budget-activity" aria-haspopup="dialog" aria-controls="power-budget-activity" aria-describedby="mission-budget-title">開始任務 <span class="card-arrow" aria-hidden="true">→</span></button>
+</div></div></article></div>
+<p class="source">任務中的路線、電量與樣本配置採簡化教學設定。封面為 ImageGen 情境插圖。</p>
+</section>
+<dialog class="activity-dialog rover-3d-dialog" id="rover-3d-activity" aria-labelledby="rover-3d-title">
+<div class="mission-experience" data-mission-shell>
+<div class="mission-flow-bar"><span data-mission-label>月面採樣 · 3D 探索</span><button type="button" data-close-activity>← 返回任務清單</button></div>
+<section class="mission-prologue" data-mission-prologue aria-labelledby="rover-3d-prologue-title">
+<div class="mission-prologue-copy"><p class="mission-prologue-label">任務前情提要</p><h3 id="rover-3d-prologue-title" data-mission-prologue-title tabindex="-1"></h3><div data-mission-prologue-copy></div><div class="mission-enter-slot"><button type="button" data-mission-enter hidden>進入遊戲 →</button></div></div>
+</section>
+<div class="rover-3d-play" id="rover-3d-play" data-mission-play hidden>
+<div class="rover-3d-scene" id="rover-3d-scene">
+<div class="rover-loading" id="r3-loading" role="status"><span class="rover-loading-orbit" aria-hidden="true">✦</span><h3>準備月面探索</h3><p>正在建立地形與月球車…</p></div>
+<div class="rover-load-error" id="r3-load-error" hidden><h3>這個裝置暫時無法開啟 3D 畫面</h3><p>可以重試載入，或使用平面月球車完成相同的採樣任務。</p><div class="actions"><button type="button" id="r3-load-retry" class="primary">重新載入 3D</button><button type="button" id="r3-fallback">改用平面月球車</button></div></div>
+<div class="rover-hud" id="r3-hud" hidden>
+<section class="rover-objective"><h2 id="rover-3d-title" tabindex="-1">月面採樣</h2><p>採集至少一份樣本，再返回基地。</p><div class="rover-target"><span id="r3-target-arrow" aria-hidden="true">↑</span><output id="r3-target">A 採樣點</output></div></section>
+<button type="button" class="rover-pause-button" id="r3-pause">Ⅱ 暫停</button>
+<div class="rover-telemetry"><div class="rover-battery"><span>電量</span><output id="r3-energy">100%</output><progress id="r3-battery" value="100" max="100" aria-label="3D 月球車剩餘電量"></progress></div><div><span>速度</span><output id="r3-speed">0.0 <small>m/s</small></output></div><div><span>里程</span><output id="r3-distance">0 <small>m</small></output></div></div>
+<div class="rover-inventory" aria-label="採樣紀錄"><span id="r3-inventory-a">○ A 玄武岩</span><span id="r3-inventory-b">○ B 角礫岩</span><output id="r3-coordinates" aria-label="月球車探索區座標"></output></div>
+<figure class="rover-minimap"><canvas id="r3-map" width="320" height="320" role="img" aria-label="月面導航圖：基地在左下，A 採樣點在右下，B 採樣點在右上，撞擊坑位於中央。"></canvas><figcaption>月面導航 <span>↑ 北</span></figcaption></figure>
+<div class="rover-utilities"><button type="button" id="r3-recenter">重設視角</button><button type="button" id="r3-recover" title="回正並朝向目標，消耗 5% 電量">回正車輛 −5%</button><button type="button" id="r3-sound" aria-pressed="true" title="車內馬達、機械臂與任務提示音效">音效：開</button></div>
+<div class="rover-drive-pad" role="group" aria-label="3D 月球車駕駛控制"><button type="button" data-rover-control="forward" aria-label="前進">↑<small>前進</small></button><button type="button" data-rover-control="left" aria-label="左轉">←<small>左轉</small></button><span aria-hidden="true">✦</span><button type="button" data-rover-control="right" aria-label="右轉">→<small>右轉</small></button><button type="button" data-rover-control="backward" aria-label="倒車">↓<small>倒車</small></button></div>
+<div class="rover-interaction"><p id="r3-status" role="status">前往 A 或 B 採樣點。</p><progress id="r3-sampling" value="0" max="100" aria-label="樣本採集進度" hidden></progress><div class="rover-context-actions"><button type="button" id="r3-collect" class="primary" disabled>採集樣本 <kbd>E</kbd></button><button type="button" id="r3-finish" disabled>返回基地結算</button></div><p class="rover-keyboard-help" id="r3-controls-help">W/S 前進與倒車 · A/D 轉向 · E 採樣 · Esc 暫停<br>拖曳畫面可查看周圍，方向鍵也能駕駛。</p></div>
+<p class="rover-simulation-note">月面場景、距離與耗電為簡化教學設定。</p>
+</div>
+<section class="rover-pause-panel" id="r3-paused" aria-labelledby="r3-paused-title" hidden><div><p>月面採樣</p><h3 id="r3-paused-title">探索已暫停</h3><p>車輛與電量都已暫停，準備好再出發。</p><button type="button" class="primary" id="r3-resume">繼續探索</button><button type="button" id="r3-restart">重新開始</button><button type="button" id="r3-leave">返回任務清單</button></div></section>
+</div></div>
+<section class="mission-result" data-mission-result aria-labelledby="rover-3d-result-title" hidden><div class="mission-result-inner"><p class="mission-result-label" data-mission-result-label>任務完成</p><h3 id="rover-3d-result-title" data-mission-result-title tabindex="-1"></h3><p class="mission-result-copy" data-mission-result-copy></p><dl class="mission-result-stats" data-mission-result-stats></dl><section class="mission-result-science" data-mission-result-science aria-labelledby="rover-3d-science-title"><h4 id="rover-3d-science-title">這次探索的發現</h4><p data-mission-result-knowledge></p><a data-mission-result-source target="_blank" rel="noopener">NASA Science｜為什麼研究月球撞擊坑？ ↗</a></section><div class="mission-result-actions" data-mission-result-actions><button type="button" data-mission-return>回到任務清單</button><button type="button" class="primary" data-mission-replay>再玩一次 →</button></div></div></section>
+</div></dialog>
+<button type="button" id="r3-legacy-opener" data-open-activity="rover-activity" data-mission="sample" hidden>平面月面採樣</button>
+<dialog class="activity-dialog activity-rover" data-scene="ready" id="rover-activity" aria-labelledby="rover-activity-title">
+<div class="mission-experience" data-mission-shell>
+<div class="mission-flow-bar"><span data-mission-label>月球探索任務</span><button type="button" data-close-activity>← 返回任務清單</button></div>
+<section class="mission-prologue" data-mission-prologue aria-labelledby="rover-prologue-title">
+<div class="mission-prologue-copy"><p class="mission-prologue-label">任務前情提要</p><h3 id="rover-prologue-title" data-mission-prologue-title tabindex="-1"></h3><div data-mission-prologue-copy></div><div class="mission-enter-slot"><button type="button" data-mission-enter hidden>進入遊戲 →</button></div></div>
+</section>
+<div class="wrap mission-play" data-mission-play hidden>
+<div class="activity-heading"><p class="scene-kicker">月面探索 · 任務控制</p><h2 id="rover-activity-title" tabindex="-1">月球車控制台</h2></div>
+<p class="intro" id="mission-objective">駕駛月球車前往採樣點，採集樣本後返回基地。</p>
+<ol class="mission-steps" aria-label="月球任務進度"><li aria-current="step">準備出發</li><li>月球車行進</li><li>返回基地</li><li>任務結果</li></ol>
+<div class="mission-grid">
+<div class="map-shell" id="map-shell">
+<div class="map-bar"><span><i></i> 月面地形圖</span><span class="game-map-readouts"><span id="map-status">基地待命</span><output id="map-energy" aria-label="月球車剩餘電量">100%</output></span></div>
+<svg class="map" id="game-map" viewBox="0 0 640 365" role="img" tabindex="0" aria-labelledby="map-title map-description" aria-describedby="driving-help">
+<title id="map-title">可駕駛的月面探索地圖</title><desc id="map-description">基地在左下方。採樣點 A 在右下方，採樣點 B 在右上方。中央撞擊坑不可通行，B 點附近的崎嶇區域移動較慢且耗電較高。</desc>
+<rect class="rough-zone" x="430" y="20" width="190" height="155" rx="24"/>
+<ellipse class="crater-barrier" cx="300" cy="108" rx="84" ry="66"/>
+<text class="terrain-label" x="252" y="115">撞擊坑</text>
+<text class="terrain-label" x="451" y="151">崎嶇區域</text>
+<path class="gridlines" d="M0 73H640 M0 146H640 M0 219H640 M0 292H640 M128 0V365 M256 0V365 M384 0V365 M512 0V365"/>
+<path id="path-rim" class="route rim" d="M85 274 C146 226 194 184 265 192 S405 201 439 150 S493 87 541 82"/>
+<path id="path-plain" class="route plain selected" d="M85 274 C162 270 183 231 261 238 S406 314 541 275"/>
+<polyline id="route-trace" class="route-trace" points="" visibility="hidden"/>
+<circle cx="85" cy="274" r="8" class="base-dot"/><circle id="site-b" cx="541" cy="82" r="11" class="rim-dot"/><circle id="site-a" cx="541" cy="275" r="11" class="plain-dot"/>
+<text x="57" y="319">基地</text><text x="498" y="55">B 採樣點</text><text x="502" y="319">A 採樣點</text>
+<g id="arrival-signal" visibility="hidden" aria-hidden="true"><circle r="16"/><circle r="16"/></g>
+<g id="rover" transform="translate(85 274)" aria-hidden="true">
+<circle r="20" fill="#0a1827" stroke="#fff" stroke-width="2"/>
+<path d="M-13 6H13M-7 5v-9h13l5 8H-7M2-4v-5l6-3" fill="none" stroke="#d6fff1" stroke-width="2" stroke-linecap="round"/>
+<circle cx="-7" cy="8" r="3" fill="#8befcb"/><circle cx="8" cy="8" r="3" fill="#8befcb"/>
+</g></svg>
+<div class="map-telemetry"><span>採樣紀錄</span><progress id="drive-progress" max="2" value="0" aria-label="已採集樣本數">0/2</progress><output id="drive-percent">0/2</output></div>
+<div class="map-bar map-footer"><span>簡化教學情境</span><span>地形插圖 · ImageGen</span></div>
+</div>
+<div class="panel controls">
+<p class="eyebrow" id="mission-phase">待命 ／ 準備出發</p>
+<p id="driving-help" class="driving-help">方向鍵或下方按鈕駕駛。靠近 A、B 採樣點後按「採集樣本」或 E，再返回左下方基地。</p>
+<div class="meter-label"><label for="energy">剩餘電量</label><output id="energy-text">100%</output></div>
+<progress id="energy" max="100" value="100">100%</progress>
+<p class="route-preview" id="proximity-status" role="status">按「開始駕駛」後出發。</p>
+<div class="drive-pad" role="group" aria-label="月球車方向控制">
+<button type="button" data-drive="up" aria-label="向上駕駛" disabled>↑</button>
+<button type="button" data-drive="left" aria-label="向左駕駛" disabled>←</button>
+<span aria-hidden="true">⌖</span>
+<button type="button" data-drive="right" aria-label="向右駕駛" disabled>→</button>
+<button type="button" data-drive="down" aria-label="向下駕駛" disabled>↓</button>
+</div>
+<ul class="sample-inventory" aria-label="樣本清單"><li id="inventory-a">A 樣本 · 尚未採集</li><li id="inventory-b">B 樣本 · 尚未採集</li></ul>
+<div class="actions"><button id="launch" type="button" class="primary">開始駕駛 →</button><button id="collect-sample" type="button" disabled>採集樣本（E）</button><button id="finish-mission" type="button" disabled>返回基地結算</button><button id="retry" type="button" hidden>重新開始</button></div>
+</div>
+</div>
+<div class="debrief" id="debrief" tabindex="-1" role="status" aria-atomic="true"><strong>任務目標</strong><p>從基地前往採樣點。哪條路比較省電？兩條路能觀察到什麼不同的樣本？</p></div>
+<p class="source">電量及樣本配置為教學設定。<a href="https://science.nasa.gov/moon/lunar-craters/why-study-craters/" target="_blank" rel="noopener">NASA Science｜為什麼研究月球撞擊坑？ ↗</a></p>
+</div><section class="mission-result" data-mission-result aria-labelledby="rover-result-title" hidden>
+<div class="mission-result-inner"><p class="mission-result-label" data-mission-result-label>任務完成</p><h3 id="rover-result-title" data-mission-result-title tabindex="-1"></h3><p class="mission-result-copy" data-mission-result-copy></p>
+<dl class="mission-result-stats" data-mission-result-stats></dl>
+<section class="mission-result-science" data-mission-result-science aria-labelledby="rover-science-title"><h4 id="rover-science-title">這次探索的發現</h4><p data-mission-result-knowledge></p><a data-mission-result-source target="_blank" rel="noopener">NASA Science｜為什麼研究月球撞擊坑？ ↗</a></section>
+<div class="mission-result-actions" data-mission-result-actions><button type="button" data-mission-return>回到任務清單</button><button type="button" class="primary" data-mission-replay>再玩一次 →</button></div></div>
+</section></div></dialog>
+<dialog class="activity-dialog activity-quiz activity-budget" data-scene="ready" id="power-budget-activity" aria-labelledby="power-budget-activity-title">
+<div class="mission-experience" data-mission-shell>
+<div class="mission-flow-bar"><span data-mission-label>月球探索任務</span><button type="button" data-close-activity>← 返回任務清單</button></div>
+<section class="mission-prologue" data-mission-prologue aria-labelledby="power-budget-prologue-title">
+<div class="mission-prologue-copy"><p class="mission-prologue-label">任務前情提要</p><h3 id="power-budget-prologue-title" data-mission-prologue-title tabindex="-1"></h3><div data-mission-prologue-copy></div><div class="mission-enter-slot"><button type="button" data-mission-enter hidden>進入遊戲 →</button></div></div>
+</section>
+<div class="wrap mission-play" data-mission-play hidden>
+<div class="activity-heading"><h2 id="power-budget-activity-title" tabindex="-1">電力判斷題</h2></div>
+<div class="budget-brief"><p class="scene-kicker">任務門檻</p><strong>抵達時保留 60% 電力</strong><div class="budget-options"><span>A 平原路線<small>消耗 25%</small></span><span>B 環坑邊緣<small>消耗 50%</small></span></div><p class="source">起始電量 100% · 簡化教學設定</p></div>
+<form class="panel quiz" id="power-budget-quiz">
+<fieldset><legend>必須保留至少 60% 電量，哪條路符合要求？</legend>
+<label class="route-option"><input type="radio" name="answer" required data-correct data-feedback="平原路線消耗 25%，抵達時剩下 75%，符合任務要求。">A　平原路線</label>
+<label class="route-option"><input type="radio" name="answer" required data-feedback="環坑邊緣消耗 50%，抵達時只剩 50%。試著比較兩條路的耗電。">B　環坑邊緣</label>
+</fieldset><button type="submit">核對任務判斷</button><p class="quiz-feedback" role="status"></p>
+</form>
+</div><section class="mission-result" data-mission-result aria-labelledby="power-budget-result-title" hidden>
+<div class="mission-result-inner"><p class="mission-result-label" data-mission-result-label>任務完成</p><h3 id="power-budget-result-title" data-mission-result-title tabindex="-1"></h3><p class="mission-result-copy" data-mission-result-copy></p>
+<dl class="mission-result-stats" data-mission-result-stats></dl>
+<section class="mission-result-science" data-mission-result-science aria-labelledby="power-budget-science-title"><h4 id="power-budget-science-title">這次探索的發現</h4><p data-mission-result-knowledge></p><a data-mission-result-source target="_blank" rel="noopener">NASA Science｜為什麼研究月球撞擊坑？ ↗</a></section>
+<div class="mission-result-actions" data-mission-result-actions><button type="button" data-mission-return>回到任務清單</button><button type="button" class="primary" data-mission-replay>再玩一次 →</button></div></div>
+</section></div></dialog>
+</main>
+<footer class="wrap"><div><strong>下一站，宇宙！</strong><p>太空互動教育網站 · 會談用原型</p></div><a href="#main">回到頂端 ↑</a></footer>
+</body></html>

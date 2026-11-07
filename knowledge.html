@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="閱讀 10 篇太空科普文章，從月球、火箭與衛星，到太空生活、火星與夜空觀察。">
+<title>太空知識｜下一站，宇宙！</title>
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script><script src="knowledge.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header><nav class="wrap" aria-label="主導覽">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">✦</span>下一站，宇宙！</a>
+<div class="navlinks"><a href="index.html">首頁</a><a href="knowledge.html" aria-current="page">太空知識</a><a href="stories.html">互動故事</a><a href="mission.html">太空任務</a><a href="teachers.html">教師資源</a></div>
+<span class="badge">會談原型</span>
+</nav></header>
+<main id="main" class="knowledge-catalog" tabindex="-1">
+<section class="wrap section" aria-labelledby="knowledge-title">
+<div class="page-intro"><h1 id="knowledge-title">太空知識</h1><p>10 篇太空小知識，從月球表面到地球軌道，再一起探索火星與夜空。挑一個你好奇的問題開始讀。</p></div>
+<form class="knowledge-filters" id="knowledge-filters" role="search" aria-label="搜尋與篩選太空知識" hidden>
+<div class="knowledge-search-row"><label for="knowledge-search">搜尋文章<input id="knowledge-search" type="search" placeholder="輸入關鍵字，例如：月球、火星、微重力" aria-controls="knowledge-articles" autocomplete="off"></label><button type="button" id="knowledge-reset" hidden>清除篩選</button></div>
+<div class="knowledge-tags" id="knowledge-categories" role="group" aria-label="文章分類">
+<button type="button" data-category="all" aria-pressed="true" aria-controls="knowledge-articles">全部文章</button>
+<button type="button" data-category="moon" aria-pressed="false" aria-controls="knowledge-articles">月球探索</button>
+<button type="button" data-category="engineering" aria-pressed="false" aria-controls="knowledge-articles">火箭與衛星</button>
+<button type="button" data-category="life" aria-pressed="false" aria-controls="knowledge-articles">太空生活</button>
+<button type="button" data-category="planets" aria-pressed="false" aria-controls="knowledge-articles">行星探索</button>
+<button type="button" data-category="sky" aria-pressed="false" aria-controls="knowledge-articles">夜空觀察</button>
+</div>
+</form>
+<p class="source knowledge-result-count" id="knowledge-count" role="status" aria-atomic="true">共 10 篇文章</p>
+<div class="knowledge-empty" id="knowledge-empty" hidden><h2>找不到符合條件的文章</h2><p>試試其他關鍵字，或清除搜尋與分類，重新探索全部文章。</p><button type="button" id="knowledge-empty-reset">清除搜尋與分類</button></div>
+<div class="article-grid" id="knowledge-articles">
+<article class="article-card" id="phases" data-category="moon" data-keywords="月球 月亮 新月 滿月 弦月 月食">
+<a href="knowledge-moon-phases.html" aria-labelledby="phases-title" aria-describedby="phases-summary">
+<img class="article-card-cover" src="assets/article-moon.png" alt="">
+<div class="article-card-content">
+<p class="article-category">月球探索 · 月相</p>
+<h2 id="phases-title">月亮為什麼會變形？</h2>
+<p class="article-summary" id="phases-summary">從月牙到滿月，為什麼同一顆月球會有這麼多種樣子？</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="craters" data-category="moon" data-keywords="月球 月亮 岩石 採樣 地質 隕石">
+<a href="knowledge-moon-craters.html" aria-labelledby="craters-title" aria-describedby="craters-summary">
+<img class="article-card-cover" src="assets/terrain.png" alt="">
+<div class="article-card-content">
+<p class="article-category">月球探索 · 月面地質</p>
+<h2 id="craters-title">一個撞擊坑，可以讀出什麼？</h2>
+<p class="article-summary" id="craters-summary">從月面的凹坑和岩屑，找出撞擊留下的線索。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="power" data-category="engineering" data-keywords="電池 太陽能 太空船 電力 能源">
+<a href="knowledge-satellite-power.html" aria-labelledby="power-title" aria-describedby="power-summary">
+<img class="article-card-cover" src="assets/article-satellite.png" alt="">
+<div class="article-card-content">
+<p class="article-category">火箭與衛星 · 衛星工程</p>
+<h2 id="power-title">衛星飛進陰影時，靠什麼供電？</h2>
+<p class="article-summary" id="power-summary">陽光被地球遮住後，看看衛星怎麼讓儀器繼續運作。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="rocket" data-category="engineering" data-keywords="推力 引擎 發射 推進 牛頓">
+<a href="knowledge-rocket-thrust.html" aria-labelledby="rocket-title" aria-describedby="rocket-summary">
+<img class="article-card-cover" src="assets/article-rocket.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">火箭與衛星 · 火箭科學</p>
+<h2 id="rocket-title">沒有空氣，火箭怎麼往前飛？</h2>
+<p class="article-summary" id="rocket-summary">火箭不用推著空氣前進。看看噴出的氣體如何讓它加速。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="orbits" data-category="engineering" data-keywords="軌道 引力 重力 速度 自由落體">
+<a href="knowledge-satellite-orbits.html" aria-labelledby="orbits-title" aria-describedby="orbits-summary">
+<img class="article-card-cover" src="assets/article-orbits.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">火箭與衛星 · 軌道與引力</p>
+<h2 id="orbits-title">衛星為什麼不會掉下來？</h2>
+<p class="article-summary" id="orbits-summary">衛星其實一直在往地球落下，卻也一直向前移動。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="microgravity" data-category="life" data-keywords="微重力 失重 自由落體 太空站">
+<a href="knowledge-microgravity.html" aria-labelledby="microgravity-title" aria-describedby="microgravity-summary">
+<img class="article-card-cover" src="assets/article-microgravity.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">太空生活</p>
+<h2 id="microgravity-title">太空人漂浮，是因為沒有重力嗎？</h2>
+<p class="article-summary" id="microgravity-summary">太空站仍受到地球引力，漂浮的祕密是大家一起自由落下。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="spacesuits" data-category="life" data-keywords="太空人 氧氣 冷卻 散熱 太空漫步 艙外活動">
+<a href="knowledge-spacesuits.html" aria-labelledby="spacesuits-title" aria-describedby="spacesuits-summary">
+<img class="article-card-cover" src="assets/article-spacesuits.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">太空生活 · 太空裝備</p>
+<h2 id="spacesuits-title">太空衣只是厚一點的衣服嗎？</h2>
+<p class="article-summary" id="spacesuits-summary">從氧氣到散熱，太空衣就像一艘穿在身上的小型太空船。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="mars" data-category="planets" data-keywords="紅色星球 鐵氧化物 大氣 太陽系">
+<a href="knowledge-mars-red.html" aria-labelledby="mars-title" aria-describedby="mars-summary">
+<img class="article-card-cover" src="assets/article-mars.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">行星探索</p>
+<h2 id="mars-title">火星為什麼看起來紅紅的？</h2>
+<p class="article-summary" id="mars-summary">紅色不是因為很熱，而是藏在火星岩石和塵土裡的鐵。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="stars" data-category="sky" data-keywords="恆星 觀星 星光 大氣 閃爍 天文">
+<a href="knowledge-twinkling-stars.html" aria-labelledby="stars-title" aria-describedby="stars-summary">
+<img class="article-card-cover" src="assets/article-stars.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">夜空觀察</p>
+<h2 id="stars-title">星星為什麼一閃一閃？</h2>
+<p class="article-summary" id="stars-summary">星光穿過不斷流動的大氣，才在我們眼中忽明忽暗。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+<article class="article-card" id="meteors" data-category="sky" data-keywords="觀星 隕石 流星體 彗星 小行星 太陽系">
+<a href="knowledge-meteors.html" aria-labelledby="meteors-title" aria-describedby="meteors-summary">
+<img class="article-card-cover" src="assets/article-meteors.png" alt="" width="1672" height="941" loading="lazy">
+<div class="article-card-content">
+<p class="article-category">夜空觀察 · 太陽系小天體</p>
+<h2 id="meteors-title">流星是星星掉下來了嗎？</h2>
+<p class="article-summary" id="meteors-summary">天空中一閃而過的亮線，通常是小碎片進入大氣留下的光。</p>
+<span class="article-action" aria-hidden="true">閱讀文章 <span>→</span></span>
+</div>
+</a>
+</article>
+</div>
+</section>
+</main>
+<footer class="wrap"><div><strong>下一站，宇宙！</strong><p>太空互動教育網站 · 會談用原型</p></div><a href="#main">回到頂端 ↑</a></footer>
+</body></html>

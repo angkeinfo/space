@@ -1,0 +1,55 @@
+.student-worksheet{margin-top:28px;background:#fff;color:#17283b;padding:clamp(18px,4vw,36px);border:1px solid #c5d0d9;border-radius:.6rem;line-height:1.75}
+.student-worksheet :is(h1,h2){font-size:clamp(1.35rem,3.3vw,1.9rem);line-height:1.4;margin:8px 0 12px}
+.worksheet-kicker{font-size:.78rem;letter-spacing:.08em;color:#3c625d;font-weight:700}
+.worksheet-identity{font-size:.88rem;margin-bottom:18px}
+.worksheet-instructions{font-size:.95rem;margin-bottom:20px}
+.worksheet-table-scroll{overflow-x:auto}
+.student-worksheet table{width:100%;border-collapse:collapse;font-size:.87rem;table-layout:fixed}
+.student-worksheet caption{text-align:left;font-weight:700;margin-bottom:8px}
+.student-worksheet th,.student-worksheet td{padding:10px 9px;border:1px solid #9cacb9;vertical-align:top;overflow-wrap:anywhere}
+.student-worksheet thead th{background:#e8f3f0;color:#173c36;text-align:left}
+.student-worksheet tbody th{text-align:left;font-weight:500;background:#f3f6f8}
+.student-worksheet td{height:60px}
+.worksheet-questions{padding-left:1.5em;margin:20px 0 0}
+.worksheet-questions li{padding-left:4px;margin-top:18px;break-inside:avoid}
+.worksheet-questions p{margin:0}
+.worksheet-answer{height:64px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,#c5d0d9 31px,transparent 32px)}
+.worksheet-extension{font-size:.87rem;margin-top:20px;border-top:1px solid #c5d0d9;padding-top:12px}
+.teacher-guide{margin-top:28px;padding:18px 22px;border:1px solid var(--line,#b8c8d2);border-radius:.6rem}
+.teacher-guide>summary{cursor:pointer;color:var(--mint,#185a4c);font-size:1.05rem;font-weight:700}
+.worksheet-teacher-guide h2{font-size:1.6rem;margin:16px 0}
+.worksheet-teacher-guide h3{font-size:1.05rem;margin:22px 0 10px}
+.worksheet-teacher-guide ul,.worksheet-teacher-guide ol{padding-left:1.5em}
+.worksheet-teacher-guide li{margin-top:10px}
+.worksheet-teacher-guide li p{margin:4px 0 0}
+.resource-sources{margin-top:24px;font-size:.85rem}
+.resource-sources a{overflow-wrap:anywhere}
+.offline-sheet{margin:0;background:#edf1f5;color:#17283b;font-family:"Microsoft JhengHei",system-ui,sans-serif;line-height:1.75}
+.offline-wrap{width:min(900px,calc(100% - 32px));margin:24px auto}
+.offline-actions{display:flex;flex-wrap:wrap;gap:10px}
+.offline-actions button{font:inherit;background:#123e37;color:white;border:0;border-radius:6px;padding:12px 16px;cursor:pointer}
+.offline-help{font-size:.9rem;margin:14px 0}
+.offline-sheet .worksheet-teacher-guide{background:white;padding:24px;margin-top:24px;border:1px solid #c5d0d9;border-radius:8px}
+.offline-sheet a{color:#185a4c}
+.offline-sheet .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@page{size:A4;margin:14mm}
+@media print{
+ .offline-sheet{background:#fff;color:#111}
+ .offline-wrap{width:auto;margin:0}
+ .offline-actions,.offline-help{display:none!important}
+ .student-worksheet{border:0;border-radius:0;padding:0;margin:0;font-size:10.5pt;line-height:1.55}
+ .student-worksheet :is(h1,h2){font-size:18pt}
+ .worksheet-instructions{font-size:10pt;margin-bottom:12px}
+ .student-worksheet table{font-size:9pt}
+ .student-worksheet th,.student-worksheet td{padding:7px}
+ .student-worksheet td{height:45px}
+ .worksheet-questions li{margin-top:12px}
+ .worksheet-answer{height:48px;background:none;border-bottom:1px solid #aaa}
+ .worksheet-extension{font-size:9pt;margin-top:14px}
+ .offline-sheet .worksheet-teacher-guide{display:none!important}
+ .offline-sheet.print-with-guide .worksheet-teacher-guide{display:block!important;break-before:page;border:0;padding:0;margin:0;font-size:10.5pt}
+ .worksheet-teacher-guide h3{break-after:avoid}
+ .student-worksheet thead{display:table-header-group}
+ .student-worksheet tr{break-inside:avoid}
+ .resource-sources{font-size:9pt}
+}

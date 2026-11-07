@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="用猜測和線索探索太空人看見的閃光與在太空站睡覺的方法。">
+<title>互動故事｜下一站，宇宙！</title>
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script><script src="page-motion.js" defer></script>
+<link rel="stylesheet" href="story-cinema.css"><script src="story-direction.js" defer></script><script src="story-recordings.js" defer></script><script src="story-audio.js" defer></script><script src="stories.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header><nav class="wrap" aria-label="主導覽">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">✦</span>下一站，宇宙！</a>
+<div class="navlinks"><a href="index.html">首頁</a><a href="knowledge.html">太空知識</a><a href="stories.html" aria-current="page">互動故事</a><a href="mission.html">太空任務</a><a href="teachers.html">教師資源</a></div>
+<span class="badge">會談原型</span>
+</nav></header>
+<main id="main" class="catalog-page" tabindex="-1">
+<section class="wrap section" aria-labelledby="stories-title">
+<div class="page-intro"><h1 id="stories-title">互動故事</h1><p>跟著見習航員與科學官米亞進入太空。觀看情節、做出決定，走出自己的故事分支。</p></div>
+<div class="story-catalog">
+<article class="article-card catalog-card" id="flash-story" aria-labelledby="flash-card-title">
+<div class="catalog-surface">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/story.png" alt="在昏暗太空艙裡閉上眼睛的太空人" width="1672" height="941"></span>
+<div class="article-card-content">
+<p class="article-category">分支故事 · 太空現象</p>
+<h2 id="flash-card-title">閉上眼，怎麼還有閃光？</h2>
+<p class="article-summary">航程中，米亞閉眼看見了亮點。你要先調查艙燈，還是追查儀器紀錄？每個決定都會帶來不同的對話與線索。</p>
+<button type="button" class="primary" data-open-activity="flash-activity" aria-haspopup="dialog" aria-controls="flash-activity" aria-describedby="flash-card-title">開始故事 <span class="card-arrow" aria-hidden="true">→</span></button>
+</div>
+</div></article>
+<article class="article-card catalog-card" id="sleep-story" aria-labelledby="sleep-card-title">
+<div class="catalog-surface">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/story-sleep.png" alt="太空站艙壁上的睡袋與準備休息的太空人" width="1672" height="941"></span>
+<div class="article-card-content">
+<p class="article-category">分支故事 · 太空生活</p>
+<h2 id="sleep-card-title">今晚，你要怎麼睡？</h2>
+<p class="article-summary">第一次在太空站過夜，你會先固定睡袋、收好筆記本，還是直接試著休息？不同安排將帶你進入不同的第一夜。</p>
+<button type="button" class="primary" data-open-activity="sleep-activity" aria-haspopup="dialog" aria-controls="sleep-activity" aria-describedby="sleep-card-title">開始故事 <span class="card-arrow" aria-hidden="true">→</span></button>
+</div>
+</div></article>
+</div>
+</section>
+<dialog class="activity-dialog cinema-dialog" id="flash-activity" data-film="flash" aria-labelledby="flash-activity-title">
+<div class="cinema-player">
+<div class="cinema-visual" aria-hidden="true"><img class="cinema-frame cinema-previous" data-film-previous alt=""><img class="cinema-frame" data-film-frame alt=""><div class="cinema-shade"></div></div>
+<header class="cinema-bar"><div><h2 id="flash-activity-title" tabindex="-1">閉上眼，怎麼還有閃光？</h2></div><button type="button" data-close-activity aria-label="返回故事列表">← 返回</button></header><section class="cinema-prologue" data-film-prologue aria-labelledby="flash-activity-prologue-title">
+<div class="prologue-copy"><p class="prologue-label">前情提要</p><h3 id="flash-activity-prologue-title" data-film-prologue-title tabindex="-1">飛往月球的途中</h3>
+<p class="prologue-paragraph">你是一名第一次參與太空任務的見習航員，正和科學官米亞一起飛往月球。</p><p class="prologue-paragraph">航程中的觀察，是你負責的第一份工作。米亞請你留意艙內的小變化，並記下還不明白的事情。</p><p class="prologue-paragraph">休息時，一個短暫的亮點打斷了平靜。接下來，你的選擇將決定你們從哪一條線索開始調查。</p>
+<div class="cinema-prologue-sound"><button type="button" data-film-sound data-sound-label="情境音效" aria-pressed="false">情境音效：關閉</button><span>開啟後，聲音會隨劇情與動作播放。</span></div><div class="prologue-action"><button type="button" class="prologue-enter" data-film-enter hidden>進入故事 →</button></div></div>
+</section>
+<div class="cinema-playback" data-film-playback hidden>
+
+<div class="cinema-space"><div><p class="cinema-scene" data-film-scene></p><p class="cinema-location" data-film-location></p><p class="cinema-action-caption" data-film-action hidden aria-hidden="true"></p></div><aside class="cinema-evidence" data-film-evidence hidden aria-label="劇情示意紀錄，非實際研究量測"><p>紀錄比對 <small>教學示意</small></p><div class="evidence-row"><span>粒子探測紀錄</span><svg viewBox="0 0 280 36" aria-hidden="true"><path d="M0 25H25L29 20 33 27 37 24H69L73 7 77 30 81 23H114L118 18 122 26H153L157 11 161 29 165 24H213L217 16 221 27 225 24H280"/></svg></div><div class="evidence-row evidence-observations"><span>亮點觀察回報</span><svg viewBox="0 0 280 36" aria-hidden="true"><path d="M0 25H44M49 25H73M78 25H145M150 25H176M181 25H228M233 25H280"/><circle cx="46" cy="25" r="3"/><circle cx="76" cy="25" r="3"/><circle cx="148" cy="25" r="3"/><circle cx="179" cy="25" r="3"/><circle cx="231" cy="25" r="3"/></svg></div><small>比對同一時段，檢查可能的關聯。<br>圖樣為劇情示意，非研究量測。</small></aside></div>
+<div class="cinema-content">
+<p class="cinema-previous-line" data-film-previous-line aria-hidden="true" hidden></p>
+<div class="cinema-dialogue" data-film-dialogue role="status" aria-atomic="true"><span class="cinema-avatar" data-film-avatar aria-hidden="true"></span><div><p class="cinema-speaker" data-film-speaker></p><p class="cinema-subtitle" data-film-subtitle></p></div></div>
+<p class="cinema-prompt" data-film-prompt hidden>接下來，你決定怎麼做？</p>
+<div class="cinema-choices" data-film-choices></div>
+
+<div class="cinema-toolbar">
+<section class="cinema-transcript" id="flash-transcript" data-film-transcript aria-labelledby="flash-transcript-title" hidden>
+<div class="transcript-heading"><div><h3 id="flash-transcript-title">對話紀錄</h3><p>關閉後，點「下一句」繼續；也可開啟自動播放。</p></div><button type="button" data-film-close-transcript aria-label="關閉對話紀錄">✕</button></div>
+<ol class="transcript-lines" data-film-transcript-lines tabindex="0" aria-label="已播放的對話"></ol>
+</section>
+<div class="cinema-controls" role="group" aria-label="故事播放控制">
+<button type="button" data-film-pause aria-pressed="false">自動播放</button><button type="button" data-film-next>下一句 →</button>
+<button type="button" data-film-toggle-transcript aria-controls="flash-transcript" aria-expanded="false">對話紀錄</button>
+<details class="cinema-more" data-film-more><summary>更多 <span aria-hidden="true">⋯</span></summary><div class="cinema-more-panel"><div class="cinema-secondary-controls"><button type="button" data-film-back disabled>上一幕</button><button type="button" data-film-skip>略過對話</button><button type="button" data-film-restart>重播故事</button></div><div class="cinema-sound-settings"><button type="button" data-film-sound aria-pressed="false">音效：關閉</button><p>扣合、收納與紙帶機採實錄音效。</p><a class="cinema-sound-preview" href="sound-preview.html" target="_blank" rel="noopener">單獨試聽動作音效 ↗</a><label class="cinema-volume"><span>音量</span><input type="range" min="0" max="100" value="45" data-film-volume aria-label="情境音效音量"><output data-film-volume-value>45%</output></label></div><p data-film-status class="cinema-play-status" role="status"></p><p class="cinema-format">動畫分鏡 · 角色與劇情為虛構</p><p class="cinema-note" data-film-note></p></div></details>
+</div></div>
+</div></div><section class="cinema-ending" data-film-ending hidden aria-labelledby="flash-activity-ending-title"><div class="cinema-ending-inner"><p class="cinema-ending-label">故事落幕</p><h3 id="flash-activity-ending-title" data-film-ending-title tabindex="-1"></h3><p data-film-ending-copy></p><div class="cinema-ending-recap"><h4>回望這次的旅程</h4><p data-film-ending-recap></p><p class="cinema-ending-reflection" data-film-ending-reflection></p></div><div class="cinema-ending-science"><h4>故事背後的科學</h4><p data-film-science></p><a data-film-source target="_blank" rel="noopener"></a></div><details class="cinema-route"><summary>回顧這次的選擇</summary><ol data-film-route></ol></details><div class="cinema-ending-actions"><button type="button" data-film-return-list>回到故事清單</button><button type="button" class="primary" data-film-next-story>下一則故事 →</button></div><p class="cinema-next-story" data-film-next-story-title></p></div></section></div></dialog>
+<dialog class="activity-dialog cinema-dialog" id="sleep-activity" data-film="sleep" aria-labelledby="sleep-activity-title">
+<div class="cinema-player">
+<div class="cinema-visual" aria-hidden="true"><img class="cinema-frame cinema-previous" data-film-previous alt=""><img class="cinema-frame" data-film-frame alt=""><div class="cinema-shade"></div></div>
+<header class="cinema-bar"><div><h2 id="sleep-activity-title" tabindex="-1">今晚，你要怎麼睡？</h2></div><button type="button" data-close-activity aria-label="返回故事列表">← 返回</button></header><section class="cinema-prologue" data-film-prologue aria-labelledby="sleep-activity-prologue-title">
+<div class="prologue-copy"><p class="prologue-label">前情提要</p><h3 id="sleep-activity-prologue-title" data-film-prologue-title tabindex="-1">太空站的第一個夜晚</h3>
+<p class="prologue-paragraph">你剛抵達國際太空站。忙碌的第一天結束後，科學官米亞帶你來到睡眠艙。</p><p class="prologue-paragraph">熟悉的筆記本、睡袋和燈光都在眼前，這裡的生活方式卻和地球不太一樣。</p><p class="prologue-paragraph">現在，輪到你安排自己的第一夜。你會從哪一件準備開始？你的選擇，將帶來不同的後續情節。</p>
+<div class="cinema-prologue-sound"><button type="button" data-film-sound data-sound-label="情境音效" aria-pressed="false">情境音效：關閉</button><span>開啟後，聲音會隨劇情與動作播放。</span></div><div class="prologue-action"><button type="button" class="prologue-enter" data-film-enter hidden>進入故事 →</button></div></div>
+</section>
+<div class="cinema-playback" data-film-playback hidden>
+
+<div class="cinema-space"><div><p class="cinema-scene" data-film-scene></p><p class="cinema-location" data-film-location></p><p class="cinema-action-caption" data-film-action hidden aria-hidden="true"></p></div><aside class="cinema-evidence" data-film-evidence hidden aria-label="劇情示意紀錄，非實際研究量測"><p>紀錄比對 <small>教學示意</small></p><div class="evidence-row"><span>粒子探測紀錄</span><svg viewBox="0 0 280 36" aria-hidden="true"><path d="M0 25H25L29 20 33 27 37 24H69L73 7 77 30 81 23H114L118 18 122 26H153L157 11 161 29 165 24H213L217 16 221 27 225 24H280"/></svg></div><div class="evidence-row evidence-observations"><span>亮點觀察回報</span><svg viewBox="0 0 280 36" aria-hidden="true"><path d="M0 25H44M49 25H73M78 25H145M150 25H176M181 25H228M233 25H280"/><circle cx="46" cy="25" r="3"/><circle cx="76" cy="25" r="3"/><circle cx="148" cy="25" r="3"/><circle cx="179" cy="25" r="3"/><circle cx="231" cy="25" r="3"/></svg></div><small>比對同一時段，檢查可能的關聯。<br>圖樣為劇情示意，非研究量測。</small></aside></div>
+<div class="cinema-content">
+<p class="cinema-previous-line" data-film-previous-line aria-hidden="true" hidden></p>
+<div class="cinema-dialogue" data-film-dialogue role="status" aria-atomic="true"><span class="cinema-avatar" data-film-avatar aria-hidden="true"></span><div><p class="cinema-speaker" data-film-speaker></p><p class="cinema-subtitle" data-film-subtitle></p></div></div>
+<p class="cinema-prompt" data-film-prompt hidden>接下來，你決定怎麼做？</p>
+<div class="cinema-choices" data-film-choices></div>
+
+<div class="cinema-toolbar">
+<section class="cinema-transcript" id="sleep-transcript" data-film-transcript aria-labelledby="sleep-transcript-title" hidden>
+<div class="transcript-heading"><div><h3 id="sleep-transcript-title">對話紀錄</h3><p>關閉後，點「下一句」繼續；也可開啟自動播放。</p></div><button type="button" data-film-close-transcript aria-label="關閉對話紀錄">✕</button></div>
+<ol class="transcript-lines" data-film-transcript-lines tabindex="0" aria-label="已播放的對話"></ol>
+</section>
+<div class="cinema-controls" role="group" aria-label="故事播放控制">
+<button type="button" data-film-pause aria-pressed="false">自動播放</button><button type="button" data-film-next>下一句 →</button>
+<button type="button" data-film-toggle-transcript aria-controls="sleep-transcript" aria-expanded="false">對話紀錄</button>
+<details class="cinema-more" data-film-more><summary>更多 <span aria-hidden="true">⋯</span></summary><div class="cinema-more-panel"><div class="cinema-secondary-controls"><button type="button" data-film-back disabled>上一幕</button><button type="button" data-film-skip>略過對話</button><button type="button" data-film-restart>重播故事</button></div><div class="cinema-sound-settings"><button type="button" data-film-sound aria-pressed="false">音效：關閉</button><p>扣合、收納與紙帶機採實錄音效。</p><a class="cinema-sound-preview" href="sound-preview.html" target="_blank" rel="noopener">單獨試聽動作音效 ↗</a><label class="cinema-volume"><span>音量</span><input type="range" min="0" max="100" value="45" data-film-volume aria-label="情境音效音量"><output data-film-volume-value>45%</output></label></div><p data-film-status class="cinema-play-status" role="status"></p><p class="cinema-format">動畫分鏡 · 角色與劇情為虛構</p><p class="cinema-note" data-film-note></p></div></details>
+</div></div>
+</div></div><section class="cinema-ending" data-film-ending hidden aria-labelledby="sleep-activity-ending-title"><div class="cinema-ending-inner"><p class="cinema-ending-label">故事落幕</p><h3 id="sleep-activity-ending-title" data-film-ending-title tabindex="-1"></h3><p data-film-ending-copy></p><div class="cinema-ending-recap"><h4>回望這次的旅程</h4><p data-film-ending-recap></p><p class="cinema-ending-reflection" data-film-ending-reflection></p></div><div class="cinema-ending-science"><h4>故事背後的科學</h4><p data-film-science></p><a data-film-source target="_blank" rel="noopener"></a></div><details class="cinema-route"><summary>回顧這次的選擇</summary><ol data-film-route></ol></details><div class="cinema-ending-actions"><button type="button" data-film-return-list>回到故事清單</button><button type="button" class="primary" data-film-next-story>下一則故事 →</button></div><p class="cinema-next-story" data-film-next-story-title></p></div></section></div></dialog>
+</main>
+<footer class="wrap"><div><strong>下一站，宇宙！</strong><p>太空互動教育網站 · 會談用原型</p></div><a href="#main">回到頂端 ↑</a></footer>
+</body></html>

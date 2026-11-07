@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="探索 10 份太空教師資源，下載 PPTX、列印活動學習單，搭配教學流程與教師指引帶進教室。">
+<title>教師資源｜下一站，宇宙！</title>
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script><script src="page-motion.js" defer></script>
+<script src="teachers.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header><nav class="wrap" aria-label="主導覽">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">✦</span>下一站，宇宙！</a>
+<div class="navlinks"><a href="index.html">首頁</a><a href="knowledge.html">太空知識</a><a href="stories.html">互動故事</a><a href="mission.html">太空任務</a><a href="teachers.html" aria-current="page">教師資源</a></div>
+<span class="badge">會談原型</span>
+</nav></header>
+<main id="main" class="catalog-page" tabindex="-1">
+<section class="section wrap" aria-labelledby="teachers-title">
+<div class="page-intro"><h1 id="teachers-title">教師資源</h1><p>10 份太空教材，包含可編輯 PPTX 與可列印學習單。挑選適合班級的活動，先看內容，再帶進教室。</p><div class="actions"><a class="button" href="teacher-submit.html">教師專區／我的教材 →</a></div></div>
+<form class="resource-filter-panel" id="resource-filters" role="search" aria-label="搜尋與篩選教師教材" hidden>
+<div class="filters resource-filters"><label>搜尋教材<input id="search" type="search" placeholder="例如：月球、太空人" aria-controls="resources"></label><label>適用年齡<select id="age" aria-controls="resources"><option value="">全部</option><option>國小高年級</option><option>國中</option></select></label></div>
+<div class="resource-topic-tags" id="resource-topics" role="group" aria-label="教材主題">
+<button type="button" data-topic="all" aria-pressed="true" aria-controls="resources">全部主題</button>
+<button type="button" data-topic="moon" aria-pressed="false" aria-controls="resources">月球探索</button>
+<button type="button" data-topic="engineering" aria-pressed="false" aria-controls="resources">火箭與衛星</button>
+<button type="button" data-topic="life" aria-pressed="false" aria-controls="resources">太空生活</button>
+<button type="button" data-topic="planets" aria-pressed="false" aria-controls="resources">行星探索</button>
+<button type="button" data-topic="sky" aria-pressed="false" aria-controls="resources">夜空觀察</button>
+</div>
+<div class="resource-filter-actions" id="resource-reset-row" hidden><button type="button" id="resource-reset">清除搜尋與篩選</button></div>
+</form>
+<p id="resource-count" class="source resource-result-count" role="status" aria-atomic="true">共 10 份教材</p>
+<div class="resource-empty" id="resource-empty" hidden><h2>找不到符合條件的教材</h2><p>試試其他主題、適用年齡或關鍵字，也可以清除篩選，查看全部教材。</p><button type="button" id="resource-empty-reset">清除搜尋與篩選</button></div>
+<div class="resource-grid" id="resources"><article class="article-card catalog-card material-card" id="rover-material" data-age="國小高年級" data-topics="moon">
+<a class="catalog-surface" href="material-rover-routes.html" aria-labelledby="rover-material-title" aria-describedby="rover-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/mission-rover.png" alt=""></span>
+<div class="article-card-content">
+<h2 id="rover-material-title">月球車路線比較學習單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">月球探索</li><li>國小高年級</li><li>PPTX 範例</li></ul>
+<p class="article-summary" id="rover-material-summary">先預測，再實際操作兩條路線，記錄剩餘電量與樣本，用觀察支持路線選擇。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span>
+</div></a></article><article class="article-card catalog-card material-card" id="flashes-material" data-age="國中" data-topics="life">
+<a class="catalog-surface" href="material-space-flashes.html" aria-labelledby="flashes-material-title" aria-describedby="flashes-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/story.png" alt=""></span>
+<div class="article-card-content">
+<h2 id="flashes-material-title">太空人看見閃光的線索卡</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">太空生活</li><li>國中</li><li>PPTX 範例</li></ul>
+<p class="article-summary" id="flashes-material-summary">從閉眼看見亮點的現象提出猜測，整理觀察與探測資料，再練習用證據說明原因。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span>
+</div></a></article>
+
+
+<article class="article-card catalog-card material-card" id="phases-material" data-age="國小高年級" data-topics="moon">
+<a class="catalog-surface" href="material-moon-phases.html" aria-labelledby="phases-material-title" aria-describedby="phases-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-moon.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="phases-material-title">月相觀察與模型紀錄單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">月球探索</li><li>國小高年級</li><li>可列印學習單</li><li>40 分鐘</li></ul>
+<p class="article-summary" id="phases-material-summary">用光源和球建立月相模型，畫下不同角度看見的亮面，再安排自己的月亮觀察紀錄。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="craters-material" data-age="國小高年級" data-topics="moon">
+<a class="catalog-surface" href="material-crater-evidence.html" aria-labelledby="craters-material-title" aria-describedby="craters-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/terrain.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="craters-material-title">撞擊坑證據比較學習單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">月球探索</li><li>國小高年級</li><li>可列印學習單</li><li>40 分鐘</li></ul>
+<p class="article-summary" id="craters-material-summary">比較兩個月面區域的簡化資料，分清觀察與推論，練習為月面歷史提出有條件的解釋。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="energy-material" data-age="國中" data-topics="engineering">
+<a class="catalog-surface" href="material-satellite-energy.html" aria-labelledby="energy-material-title" aria-describedby="energy-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-satellite.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="energy-material-title">衛星電力收支任務單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">火箭與衛星</li><li>國中</li><li>可列印學習單</li><li>45 分鐘</li></ul>
+<p class="article-summary" id="energy-material-summary">用一組簡化的功率與時間資料，計算日照充電、陰影耗電，替衛星安排可行的工作量。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="rocket-material" data-age="國小高年級" data-topics="engineering">
+<a class="catalog-surface" href="material-balloon-rocket.html" aria-labelledby="rocket-material-title" aria-describedby="rocket-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-rocket.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="rocket-material-title">氣球火箭探究紀錄單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">火箭與衛星</li><li>國小高年級</li><li>可列印學習單</li><li>40 分鐘</li></ul>
+<p class="article-summary" id="rocket-material-summary">用氣球、吸管與細繩觀察推進方向，設計一次只改變一項條件的比較活動。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="orbit-material" data-age="國中" data-topics="engineering life">
+<a class="catalog-surface" href="material-orbit-freefall.html" aria-labelledby="orbit-material-title" aria-describedby="orbit-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-microgravity.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="orbit-material-title">軌道與失重概念辨識卡</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">火箭與衛星</li><li class="material-topic">太空生活</li><li>國中</li><li>可列印學習單</li><li>45 分鐘</li></ul>
+<p class="article-summary" id="orbit-material-summary">從太空站、太空人與鉛筆的共同運動，辨識「沒有引力」和「一起自由落下」兩種說法。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="suit-material" data-age="國小高年級" data-topics="life">
+<a class="catalog-surface" href="material-spacesuit-design.html" aria-labelledby="suit-material-title" aria-describedby="suit-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-spacesuits.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="suit-material-title">太空衣功能配對與設計單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">太空生活</li><li>國小高年級</li><li>可列印學習單</li><li>40 分鐘</li></ul>
+<p class="article-summary" id="suit-material-summary">把供氧、散熱與防護需求配對到裝備，再畫出一套有理由的太空衣設計。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="mars-material" data-age="國中" data-topics="planets">
+<a class="catalog-surface" href="material-mars-comparison.html" aria-labelledby="mars-material-title" aria-describedby="mars-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-mars.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="mars-material-title">地球與火星資料比較單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">行星探索</li><li>國中</li><li>可列印學習單</li><li>45 分鐘</li></ul>
+<p class="article-summary" id="mars-material-summary">讀取兩顆行星的時間與環境資料，計算差異，檢查「紅色就很熱」的直覺。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article>
+<article class="article-card catalog-card material-card" id="sky-material" data-age="國中" data-topics="sky">
+<a class="catalog-surface" href="material-night-sky.html" aria-labelledby="sky-material-title" aria-describedby="sky-material-summary">
+<span class="card-cover-window"><img class="article-card-cover" src="assets/article-meteors.png" alt="" loading="lazy"></span>
+<div class="article-card-content"><h2 id="sky-material-title">夜空觀察與流星辨識紀錄單</h2>
+<ul class="material-tags" aria-label="教材標籤"><li class="material-topic">夜空觀察</li><li>國中</li><li>可列印學習單</li><li>45 分鐘</li></ul>
+<p class="article-summary" id="sky-material-summary">分辨持續閃爍的亮星與一閃而過的流星，練習記錄時間、方向與觀察限制。</p>
+<span class="article-action" aria-hidden="true">查看教材 <span class="card-arrow">→</span></span></div></a></article></div>
+<section class="content-block" id="teacher-submission" aria-labelledby="submission-title">
+<h2 id="submission-title">教師投稿</h2><p>分享你設計的太空教材。登入教師帳號後，即可填寫教材資料、上傳檔案並送交審核。</p>
+<div class="panel submission-panel"><h3>先登入，再分享教材</h3><p class="source">在「我的教材」查看審核進度、修改投稿內容。教材經審核通過後才會公開。</p><div class="actions"><a class="button primary" href="teacher-submit.html">進入我的教材 →</a></div></div>
+</section>
+</section></main>
+<footer class="wrap"><div><strong>下一站，宇宙！</strong><p>太空互動教育網站 · 會談用原型</p></div><a href="#main">回到頂端 ↑</a></footer>
+</body></html>

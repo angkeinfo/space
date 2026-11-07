@@ -1,0 +1,42 @@
+.activity-dialog:has(.mission-experience){scroll-padding-top:0;background:#000}
+.mission-experience{display:flex;flex-direction:column;min-height:100svh;padding:14px 0 24px;background:linear-gradient(120deg,#081722ec,#102834e6),url(assets/terrain.png) center/cover #080f1c}
+.mission-flow-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(1440px,calc(100% - 64px));margin-inline:auto;min-height:40px}
+.mission-flow-bar>span{font-size:.85rem;color:#c4d2df}
+.mission-flow-bar button{font-size:.78rem;min-height:36px;padding:6px 10px;border-color:transparent;background:#07101c80}
+.activity-dialog:is([data-mode="briefing"],[data-mode="entering"]) .mission-experience{background:#000}
+.activity-dialog[data-mode="result"] .mission-experience{background:radial-gradient(1px 1px at 12% 24%,#b9d5e180 98%,transparent),radial-gradient(1px 1px at 86% 18%,#b9d5e180 98%,transparent),radial-gradient(ellipse at 50% 0%,#10233388,transparent 65%),#02060d}
+.mission-prologue{display:flex;align-items:center;justify-content:center;flex:1;padding:clamp(36px,8svh,80px) 24px;color:#fff}
+.mission-prologue-copy{width:100%;max-width:640px}
+.mission-prologue-label{font-size:.85rem;letter-spacing:.15em;margin-bottom:20px}
+.mission-prologue h3{font-size:clamp(1.7rem,4.5vw,2.8rem);line-height:1.4;margin-bottom:24px;color:#fff}
+.mission-prologue h3:focus,.mission-result h3:focus{outline:none}
+[data-mission-prologue-copy] p{font-size:clamp(1rem,2.1vw,1.18rem);line-height:2;margin-top:16px;color:#eceef2}
+.mission-enter-slot{min-height:80px}
+[data-mission-enter]{margin-top:32px;background:#000;color:#fff;border:1px solid #aaa;border-radius:4px;min-height:48px;padding:10px 22px}
+@media(hover:hover) and (pointer:fine){[data-mission-enter]:hover{background:#fff;color:#000;border-color:#fff}}
+.mission-play .activity-heading{margin-block:24px 20px}
+.mission-play{padding-bottom:20px}
+.mission-result{display:flex;align-items:center;justify-content:center;flex:1;width:min(740px,calc(100% - 48px));margin-inline:auto;padding:clamp(36px,7svh,80px) 0}
+.mission-result-inner{width:100%}
+.mission-result-label{color:#b5e8d4;font-size:.8rem;letter-spacing:.12em;margin-bottom:16px}
+.mission-result h3{font-size:clamp(1.7rem,3.8vw,2.8rem);line-height:1.4}
+.mission-result-copy{color:#cfdae5;line-height:1.85;margin-top:16px}
+.mission-result-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-block:22px;margin-top:24px;border-block:1px solid #304457}
+.mission-result-stats dt{font-size:.78rem;color:#aebfcf}
+.mission-result-stats dd{margin:8px 0 0;font-size:clamp(1rem,3vw,1.4rem);font-weight:700;color:#f0f5fa;overflow-wrap:anywhere}
+.mission-result-science{margin-top:26px}
+.mission-result-science h4{font-size:1rem;color:#f2ce9e;margin-bottom:10px}
+.mission-result-science p{color:#cfdae5;line-height:1.9}
+.mission-result-science a{display:inline-block;font-size:.85rem;margin-top:14px}
+.mission-result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:22px;border-top:1px solid #304457}
+.mission-result-actions button{min-height:44px;font-size:.88rem}
+@media(max-width:600px){
+.mission-flow-bar{width:calc(100% - 32px)}
+.mission-flow-bar>span{font-size:.78rem}
+.mission-flow-bar button{font-size:.73rem;padding-inline:6px}
+.mission-prologue{padding:32px 20px}
+.mission-result{width:calc(100% - 40px);padding:32px 0 24px}
+.mission-result-stats{gap:12px}
+.mission-result-stats dd{font-size:1rem}
+.mission-result-actions button{flex:1;padding-inline:10px;font-size:.82rem}
+}

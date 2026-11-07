@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="登入教師帳號，分享太空教材與課堂活動。">
+<title>我的教材｜下一站，宇宙！</title>
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script><script src="teacher-material-store.js" defer></script><script src="teacher-submit.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header><nav class="wrap" aria-label="主導覽">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">✦</span>下一站，宇宙！</a>
+<div class="navlinks"><a href="index.html">首頁</a><a href="knowledge.html">太空知識</a><a href="stories.html">互動故事</a><a href="mission.html">太空任務</a><a href="teachers.html" aria-current="page">教師資源</a></div>
+<span class="badge">會談原型</span>
+</nav></header>
+<main id="main" tabindex="-1"><section class="section wrap submission-workspace" aria-labelledby="submission-page-title">
+<a class="article-back" href="teachers.html">← 返回教師資源</a>
+<div class="page-intro"><h1 id="submission-page-title">教師專區</h1><p id="submission-page-intro">登入後，管理你分享的每一份教材。</p></div>
+<p class="prototype-note" id="storage-note">流程原型：僅於此分頁暫存示範登入、教材資料與檔名，不會驗證真實身分或上傳檔案內容。重新整理可繼續操作；關閉分頁後清除。</p>
+<noscript><p class="prototype-note">請啟用 JavaScript 以體驗示範登入與投稿流程。</p></noscript>
+<section class="panel teacher-login" id="login-panel" aria-labelledby="login-title">
+<h2 id="login-title" tabindex="-1">登入教師帳號</h2><p class="source">查看我的教材與審核進度，也能新增投稿、修改內容與替換附件。</p>
+<form id="teacher-login" class="stack" aria-describedby="demo-account">
+<p class="source" id="demo-account">示範帳號：teacher@example.com<br>示範密碼：space-demo。請勿輸入真實帳密。</p>
+<button type="button" id="fill-demo">填入示範帳密</button>
+<label>電子郵件<input id="teacher-email" type="email" required autocomplete="off" spellcheck="false" placeholder="teacher@example.com"></label>
+<label>密碼<input id="teacher-password" type="password" required autocomplete="off" placeholder="請輸入示範密碼"></label>
+<p class="form-message" id="login-message" role="alert"></p>
+<button type="submit" class="primary">登入我的教材</button>
+</form>
+</section>
+<section id="upload-panel" hidden aria-label="教師教材管理">
+<div class="teacher-account"><p><strong>示範教師</strong><span>teacher@example.com</span></p><div class="teacher-account-actions"><a class="button" id="my-materials-link" href="#my-materials">我的教材</a><a class="button primary" id="new-material-link" href="#new">新增教材</a><button type="button" id="teacher-logout">登出</button></div></div>
+<p id="portal-message" class="form-message" role="status"></p>
+<section id="my-materials-panel" hidden aria-labelledby="my-materials-title">
+<div class="my-materials-heading"><h2 id="my-materials-title" tabindex="-1">我的教材</h2><p class="source">查看投稿進度，或接續修改教材內容。已提供三種審核狀態的教材範例，也可以新增自己的示意投稿。</p></div>
+<div class="materials-toolbar"><label>審核狀態<select id="material-status-filter"><option value="">全部狀態</option><option value="pending">待審核</option><option value="approved">審核通過</option><option value="revision">需修改</option></select></label><p class="source" id="my-materials-count" role="status"></p></div>
+<div id="my-materials-list" class="my-materials-list"></div>
+<div id="my-materials-empty" class="panel" hidden><h3>目前沒有這個狀態的教材</h3><p class="source">切換審核狀態，或新增一份教材。</p><div class="actions"><a class="button" href="#new">新增教材</a></div></div>
+</section>
+<div class="panel" id="submission-editor"><h2 id="upload-title" tabindex="-1">新增教材</h2><p class="source">填寫教材介紹，讓老師們了解如何在課堂使用。</p>
+<p class="source" id="editing-notice" hidden>修改後送出會重新進入待審核。未選擇新封面或附件時，會保留原有檔案資訊。</p>
+<form id="teacher-submission" class="stack"><fieldset id="submission-fields" disabled>
+<label>教材名稱<input name="title" required maxlength="80" placeholder="例如：我的月球探索活動"></label>
+<div class="submission-fields-row"><label>適用年級<select name="age" required><option value="">請選擇</option><option>國小低年級</option><option>國小中年級</option><option>國小高年級</option><option>國中</option><option>高中</option></select></label>
+<label>教材標籤<input name="tags" maxlength="80" placeholder="例如：月球、探究活動、學習單"></label></div>
+<label>教材簡述<textarea name="summary" required maxlength="600" rows="4" placeholder="介紹學習目標、活動內容與使用方式。"></textarea></label>
+<label>教材封面（選填）<input name="cover" type="file" accept=".jpg,.jpeg,.png,.webp" aria-describedby="cover-help"></label><p class="source" id="cover-help">JPG、PNG 或 WebP，單張 5 MB 以內；建議使用橫式封面。</p>
+<p class="source" id="existing-cover" hidden></p>
+<label>教材附件<input name="files" type="file" multiple required accept=".ppt,.pptx,.pdf,.doc,.docx,.zip" aria-describedby="files-help"></label><p class="source" id="files-help">可選擇多個 PPT、PPTX、PDF、Word 或 ZIP 檔案；每份 20 MB 以內，總計 50 MB 以內。</p>
+<div id="existing-files-panel" hidden><p class="source">原有附件（選擇新附件後，將整組替換）</p><ul id="existing-files" class="selected-files"></ul></div>
+<ul id="selected-files" class="selected-files" aria-label="已選擇的附件" aria-live="polite"></ul>
+<label>授權方式<select name="license" required><option value="">請選擇</option><option>授權站內展示與下載</option><option>依附件授權條款</option></select></label>
+<label class="submission-consent"><input name="consent" type="checkbox" required><span>我確認有權分享這些教材，並同意依選擇的授權方式提供使用。</span></label>
+<p class="form-message" id="upload-message" role="alert"></p>
+<div class="actions"><button type="submit" id="save-material" class="primary">送交審核</button><a href="#my-materials">取消，返回我的教材</a></div>
+</fieldset></form></div>
+<section class="panel" id="submission-receipt" hidden aria-labelledby="receipt-title">
+<p class="badge submission-status">待審核 · 示範</p><h2 id="receipt-title" tabindex="-1">投稿已送交審核</h2>
+<p class="source">審核通過後，教材才會出現在公開列表。本次為流程示範，未實際傳送或儲存檔案。</p>
+<dl class="submission-receipt"><dt>教材名稱</dt><dd id="receipt-material"></dd><dt>適用年級</dt><dd id="receipt-age"></dd><dt>教材附件</dt><dd><ul id="receipt-files" class="selected-files"></ul></dd></dl>
+<div class="actions"><a class="button primary" href="#my-materials">查看我的教材</a><a class="button" id="receipt-edit" href="#my-materials">繼續修改</a><a href="#new">再投稿一份</a></div>
+</section>
+</section>
+</section></main>
+<footer class="wrap"><div><strong>下一站，宇宙！</strong><p>太空互動教育網站 · 會談用原型</p></div><a href="#main">回到頂端 ↑</a></footer>
+</body></html>

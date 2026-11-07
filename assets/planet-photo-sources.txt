@@ -1,0 +1,46 @@
+太空任務天體影像來源
+
+八大行星選自 NASA Science「About the Planets」頁面：
+https://science.nasa.gov/solar-system/planets/
+
+本地檔案保留下載的 NASA 影像內容；畫面以 CSS 調整顯示尺寸與裁切。
+土星的黑色背景以瀏覽器的 SVG 顯示濾鏡處理，保留照片中的行星環，未另畫假環。
+照片可能是多張觀測合成，或經過色彩增強，不保證等同肉眼直接觀察的顏色。
+
+太陽 / NASA Solar Dynamics Observatory / AIA 171 Å / PIA26681
+觀測日期：2025-09-10。極紫外光觀測著色影像，非肉眼可見色彩。
+NASA/GSFC/Solar Dynamics Observatory
+https://science.nasa.gov/photojournal/image-of-sun-from-nasas-solar-dynamics-observatory/
+https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia26/pia26681/PIA26681.jpg?fit=clip&w=1024
+
+水星 / MESSENGER / PIA15162
+https://science.nasa.gov/wp-content/uploads/2024/03/pia15162-mercury-basins-messenger-16x9-1.jpg?w=1024
+
+金星 / Mariner 10 / PIA23791 Fig. 2
+https://science.nasa.gov/wp-content/uploads/2024/03/venus-mariner-10-pia23791-fig2-16x9-1.jpg?w=1024
+
+地球 / Apollo 17 / Blue Marble
+https://science.nasa.gov/wp-content/uploads/2024/03/blue-marble-apollo-17-16x9-1.jpg?w=1024
+
+火星 / Viking / Full Globe
+https://science.nasa.gov/wp-content/uploads/2024/03/mars-full-globe-16x9-1.jpg?w=1024
+
+木星 / Juno / PIA22946 / 色彩增強合成影像
+Enhanced image by Kevin M. Gill (CC BY), based on NASA/JPL-Caltech/SwRI/MSSS images.
+https://www.jpl.nasa.gov/images/pia22946-jupiter-marble/
+https://science.nasa.gov/wp-content/uploads/2024/03/jupiter-marble-pia22946-16x9-1.jpg?w=1024
+
+土星 / Cassini / PIA21345
+NASA/JPL-Caltech/Space Science Institute
+https://science.nasa.gov/wp-content/uploads/2023/05/saturn-farewell-pia21345-sse-banner-1920x640-1.jpg?w=1024
+
+天王星 / Voyager 2 / PIA18182
+https://science.nasa.gov/wp-content/uploads/2024/03/uranus-pia18182-16x9-1.jpg?w=1024
+
+海王星 / Voyager 2 / PIA01492 / 經色彩處理
+https://science.nasa.gov/wp-content/uploads/2024/03/pia01492-neptune-full-disk-16x9-1.jpg?w=1024
+
+月球 / LRO / Lunar Near Side / 攝影資料合成
+NASA/Goddard Space Flight Center/Arizona State University
+https://science.nasa.gov/resource/lunar-near-side/
+https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/l/lro_nearside.jpg?fit=crop&h=1024&w=1024

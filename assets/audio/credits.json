@@ -1,0 +1,89 @@
+{
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "clips": [
+    {
+      "file": "buckle.wav",
+      "description": "拉動織帶、扣具扣合",
+      "duration": 3.05,
+      "source_start": 0.65,
+      "source": {
+        "title": "Seat belt pulling and clicking",
+        "author": "evsecrets",
+        "url": "https://freesound.org/people/evsecrets/sounds/170743/",
+        "license": "CC0 1.0"
+      },
+      "processing": "excerpt, mono 24 kHz, high/low-pass cleanup, level adjustment and edge fades; original playback speed",
+      "sha256": "00c187d29458e4ef1cd019857169d9a84c6226d7cd57774a81ab7522cff633f5"
+    },
+    {
+      "file": "stow.wav",
+      "description": "拿取、移動書本與放下的接觸聲",
+      "duration": 3.25,
+      "source_start": 0.05,
+      "source": {
+        "title": "take book.ogg",
+        "author": "Kneeling",
+        "url": "https://freesound.org/people/Kneeling/sounds/643872/",
+        "license": "CC0 1.0"
+      },
+      "processing": "excerpt, mono 24 kHz, high/low-pass cleanup, level adjustment and edge fades; original playback speed",
+      "sha256": "68979ae5fb3a3ccfc14fc1ab040140e2a4ca41704954da32ba33eebe70ea67c4"
+    },
+    {
+      "file": "data.wav",
+      "description": "紙帶機運轉與送紙",
+      "duration": 5.9,
+      "source_start": 0.1,
+      "source": {
+        "title": "Old Till Printer Feeding Receipt Paper.wav",
+        "author": "lolamadeus",
+        "url": "https://freesound.org/people/lolamadeus/sounds/217181/",
+        "license": "CC0 1.0"
+      },
+      "processing": "excerpt, mono 24 kHz, high/low-pass cleanup, level adjustment and edge fades; original playback speed",
+      "sha256": "27421e4309416681573f5474b0ea4029a2c910ab7115446c9de039b2c104811b"
+    },
+    {
+      "file": "compare.wav",
+      "description": "紙帶機持續送紙",
+      "duration": 6.2,
+      "source_start": 6.0,
+      "source": {
+        "title": "Old Till Printer Feeding Receipt Paper.wav",
+        "author": "lolamadeus",
+        "url": "https://freesound.org/people/lolamadeus/sounds/217181/",
+        "license": "CC0 1.0"
+      },
+      "processing": "excerpt, mono 24 kHz, high/low-pass cleanup, level adjustment and edge fades; original playback speed",
+      "sha256": "81e36501e1bb89c80bf6ce2886f228dac888977e07e3fb0270c5afea380a5504"
+    },
+    {
+      "file": "cloth.wav",
+      "description": "布料移動",
+      "duration": 2.5,
+      "source_start": 15.0,
+      "source": {
+        "title": "Fabric Rustle and Shuffle - Foley - Various sounds",
+        "author": "khenshom",
+        "url": "https://freesound.org/people/khenshom/sounds/527698/",
+        "license": "CC0 1.0"
+      },
+      "processing": "excerpt, mono 24 kHz, high/low-pass cleanup, level adjustment and edge fades; original playback speed",
+      "sha256": "5760b0cbdf3d0fddbc8e0cc3c17ca5e5af57850549fb1c0f21f41245716a863d"
+    },
+    {
+      "file": "write.wav",
+      "description": "紙本處理與摩擦",
+      "duration": 0.95,
+      "source_start": 0.05,
+      "source": {
+        "title": "take book.ogg",
+        "author": "Kneeling",
+        "url": "https://freesound.org/people/Kneeling/sounds/643872/",
+        "license": "CC0 1.0"
+      },
+      "processing": "excerpt, mono 24 kHz, high/low-pass cleanup, level adjustment and edge fades; original playback speed",
+      "sha256": "b6b994eef9b54ff2e01fcdbb630852e75a8a72d8f71823cc1eea00b6f1f15f05"
+    }
+  ]
+}
